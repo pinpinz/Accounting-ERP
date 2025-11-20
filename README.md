@@ -20,7 +20,7 @@ A simple multi-company ERP keuangan built with **Laravel 12**, **AdminLTE 4**, a
 3. **Install dependensi**
    ```bash
    composer install
-   npm install && npm run build
+   npm install && npm run build   # atau jalankan: php artisan build
    ```
 4. **Migrasi & seed**
    ```bash
