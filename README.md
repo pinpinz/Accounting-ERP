@@ -16,7 +16,8 @@ A simple multi-company ERP keuangan built with **Laravel 12**, **AdminLTE 4**, a
    cp .env.example .env
    php artisan key:generate
    ```
-2. **Atur PostgreSQL** di `.env` (default: `accounting_erp`, user `postgres`, password `secret`).
+2. **Atur PostgreSQL** di `.env` (default docker compose: host `postgres`, db `accounting_erp`, user `erp_user`, password `secret`).
+   Jalankan Postgres cepat dengan: `docker compose up -d db` (Adminer: http://localhost:8080 server `db`).
 3. **Install dependensi**
    ```bash
    composer install
@@ -53,6 +54,7 @@ export GIT_REMOTE_URL="https://github.com/<owner>/<repo>.git"
 ```
 
 ## Catatan
-- Seeder membuat akun admin: **admin@example.com / password**.
+- Seeder membuat akun admin siap pakai: **admin@example.com / password**.
+- Jika tidak memakai Docker, samakan kredensial DB di `.env` dengan server Postgres Anda.
 - Pagination menggunakan Bootstrap 5 agar konsisten dengan AdminLTE.
 - Sesuaikan Chart.js/tema AdminLTE melalui `resources/views/layouts/app.blade.php` dan `resources/js/app.js`.
